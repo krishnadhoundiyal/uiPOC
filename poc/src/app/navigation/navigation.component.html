@@ -1,0 +1,32 @@
+ <div>
+ <ng-container *ngFor="let menuList of menuObject | keyvalue">
+	<button  mat-button [color]="colorTheme" [matMenuTriggerFor]="main_menu">{{menuList.key}}</button>
+	<mat-menu #main_menu="matMenu">
+  <ng-container *ngFor="let mainItem of menuList.value | keyvalue">
+    <button mat-menu-item [matMenuTriggerFor]="sub_menu">{{ mainItem.key }}</button>
+    <mat-menu #sub_menu="matMenu">
+       <!--<button *ngFor="let subItem of mainItem.value" mat-menu-item>{{ subItem }}</button>-->
+	   <a *ngFor="let subItem of mainItem.value" mat-menu-item [routerLink]="linker[subItem]">{{subItem}}</a>
+    </mat-menu>
+  </ng-container>
+</mat-menu>
+ </ng-container>
+ <!--<nav mat-tab-nav-bar >
+        <a mat-tab-link
+           *ngFor="let routeLink of routeLinks; let i = index;"
+           [routerLink]="routeLink.link"
+		   
+           routerLinkActive="mat-tab-link-active"
+           #rla="routerLinkActive"
+           (click)="activeLinkIndex = i">
+            {{routeLink.label}}
+        </a>
+    </nav>
+	-->
+	</div>
+	<div>
+	<router-outlet></router-outlet>
+	</div>
+	
+	
+	

@@ -1,0 +1,42 @@
+
+
+<div class="example-container">
+  <mat-form-field>
+  <mat-select placeholder="Ordering Facility ID" [formControl]="toppings" multiple>
+    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+<mat-select placeholder="Processing Type" [formControl]="toppings" multiple>
+    <mat-option *ngFor="let topping of processingTypeList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label>Table</mat-label>
+    <input matInput placeholder={{toppings.name}}>
+   
+    
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Station</mat-label>
+    <input matInput placeholder={{toppings.name}}>
+   
+    
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Default Suffix</mat-label>
+    <input matInput placeholder={{toppings.name}}>
+   
+    
+  </mat-form-field>
+  <mat-form-field>
+  <mat-select placeholder="Ordering Facility ID" [formControl]="toppings" multiple>
+    <mat-option *ngFor="let topping of qlsList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>
+  
+<button mat-raised-button color="primary">Login</button>
+  
+</div>

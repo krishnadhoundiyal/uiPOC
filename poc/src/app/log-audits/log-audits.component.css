@@ -1,0 +1,22 @@
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+  margin-right:25%;
+  align-items: center;
+    margin-top: 10px;
+    border: solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    //margin-top: 4%;
+	border: 1px solid #ccc!important;
+	border-radius : 8px 8px 8px 8px;
+}
+
+.example-container > * {
+  width: 80%;
+}
