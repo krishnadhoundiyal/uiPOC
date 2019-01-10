@@ -1,0 +1,30 @@
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 34px;
+	
+}
+.mat-toolbar.mat-primary {
+	background-color : #0c7b0a;
+}
+.mat-grid-tile .mat-figure {
+	height: 50% !important;
+    border-right: 1px solid #c3c5b4 !important;
+}
+
+.mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
+    color: white;
+}
+.example-container {
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+  height : 100% !important;
+}
+.background-setter {
+	background-color: yellow !important;
+}
+.opacity-setter {
+	opacity : 0.6;
+}

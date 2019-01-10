@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <!--<span>Quest Diagnostics</span>-->
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+   <mat-sidenav #drawer mode="side" opened role="navigation" style="background-color: #8be28b30;">
+    <!--<mat-list>
+                <ng-container  *ngFor="let category of leftMenus  | keyvalue">
+                    <mat-list-item style="background-color:rgba(24, 142, 24, 0.5);font-weight:500;font-size:13px">{{category.key}}</mat-list-item>
+                    <mat-list style="margin-left:30px;">
+                          <div *ngFor="let subcategory of category.value">
+                            <mat-list-item style="font-weight:500;font-size:10px;height:24px">{{ subcategory }}</mat-list-item>
+                          </div>
+                    </mat-list>
+                </ng-container>
+            </mat-list>-->
+	<mat-list>
+                <ng-container  *ngFor="let category of leftMenus1;let count = index">
+                    <mat-list-item style="background-color:rgba(24, 142, 24, 0.5);font-weight:500;font-size:13px;height:24px" >{{category.route}}</mat-list-item>
+                    <mat-list style="margin-left:5px;">
+                          <div *ngFor="let subcategory of category.subroute; let innerCount = index">
+                            <mat-list-item style="font-weight:500;font-size:10px;height:24px" [class.background-setter]="count==3 && innerCount != 3" [class.opacity-setter]="count == 3 && innerCount == 3">{{ subcategory }}</mat-list-item>
+                          </div>
+                    </mat-list>
+                </ng-container>
+            </mat-list>
+  </mat-sidenav>
+ <mat-sidenav-content style="margin-top:150px">
+	<div style="margin-left:50px">
+    <img  style="" src="../assets/images/logo.png">
+	<h1 class ="display-4">WELCOME TO IDAA (v2018.11) ORDER ENTRY</h1>
+	</div>
+  </mat-sidenav-content> 
+</mat-sidenav-container>
