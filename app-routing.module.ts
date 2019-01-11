@@ -1,10 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-//import the components
-import { LogAuditsComponent } from './log-audits/log-audits.component';
 import { PatientSearchComponent } from './patient-search/patient-search.component';
-import { GenerateReportsComponent } from './generate-reports/generate-reports.component';
 
 const routes: Routes = [
 	
@@ -13,26 +9,17 @@ const routes: Routes = [
    // component: AppComponent,
     children: [
       {
-		path: 'patientSearch', 
+		path: 'LandingPage', 
 		component : PatientSearchComponent
 		},
-		{
-			path : 'generateReports',
-			component : GenerateReportsComponent,
-		},
-		{
-			path : 'logAudits',
-			component : LogAuditsComponent
-		},
-		
 	]
   },
 ];
 
 @NgModule({
-  //declarations : [LogAuditsComponent,PatientSearchComponent,GenerateReportsComponent],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
 
+}
